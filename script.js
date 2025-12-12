@@ -9,10 +9,9 @@ document.querySelector('#push').onclick=function(){
 createTask();}
 //the function that creates a task
 function createTask(){
-if (taskInput.ariaValueMax.length==0){
-alert('The task field is blank.Enter a task name and try again.');
-}
-else{
+  if (taskInput.Value.length==0) {
+  alert('The task field is blank.Enter a task name and try again.');}
+  else{
 //this block inserts HTML that creates each task into the task area div element
 taskSection.innerHTML +=
 `<div class='task'>
