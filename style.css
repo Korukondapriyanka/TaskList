@@ -44,7 +44,7 @@ color: #1e053c;
    }
    #newtask input :focus{
        outline: none;
-       border-color: #411479;
+       border-color: #412479;
    }
    #newtask button{
        position: relative;
