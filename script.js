@@ -1,14 +1,14 @@
 //constants declared for input butoon and task list area
-const taskInput=document.querySelector('#newtask input');
-const taskSection=document.querySelector('.tasks');
+const taskInput = document.querySelector('#newtask input');
+const taskSection = document.querySelector('.tasks');
 //listener for the Enter key.Used to add a new task.
-taskInput.addEventListener('keyup',(e)=>{
-if (e.key=="Enter"){createTask();}});
+taskInput.addEventListener('keyup',(e) => {
+if (e.key == "Enter") {createTask();}});
 //the oneclick event for the 'Add'button
 document.querySelector('#push').onclick=function(){
-createTask();}
+createTask(); }
 //the function that creates a task
-function createTask(){
+function createTask() {
   if (taskInput.Value.length==0) {
   alert('The task field is blank.Enter a task name and try again.');}
   else{
@@ -24,15 +24,16 @@ taskSection.innerHTML +=
 var current_tasks = document.querySelectorAll('.delete');
 for (var i = 0; i < current_tasks.length; i++){
 current_tasks[i].onclick=function(){
-this.parentNode.remove();}}
+this.parentNode.remove(); }}
 taskSection.offsetHeight >= 300
 ? taskSection.classList.add('overflow')
-: taskSection.classList.remove('overflow');  
+: taskSection.classList.remove('overflow');
+taskInput.value ='';  
 }
 }
-function updateTasks(task){
-    let taskItem =task.parentElement.lastElementchild;
-    if (task.cheched){
+function updateTask(task){
+    let taskItem =task.parentElement.lastElementChild;
+    if (task.checked) {
         taskItem.classList.add('checked');}
         else {taskItem.classList.remove('checked');
     }
